@@ -1,1 +1,3 @@
+#!/bin/bash
+echo run
 java -jar saxon9he.jar -o:zz.html zz.xml zz.xsl
