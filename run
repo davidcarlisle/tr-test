@@ -1,3 +1,4 @@
 #!/bin/bash
+set -e
 echo run
 java -jar Saxon-HE-9.8.0-2.jar -o:out/zz.html zz.xml zz.xsl
