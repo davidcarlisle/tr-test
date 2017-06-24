@@ -7,3 +7,4 @@ echo texrun
 java -jar jars/Saxon-HE-9.8.0-2.jar -o:zz.tex zz.xml zztex.xsl
 pdflatex zz
 cp zz.pdf out
+echo test > out/index.html
