@@ -1,5 +1,12 @@
+before_install:
+ - sudo apt-get texlive-latex-base
+ 
 install:
  - ./install-jars
+
+cache:
+  directories:
+    - $HOME/jars
 
 script:
  - ./run
