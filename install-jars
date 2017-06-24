@@ -2,11 +2,11 @@
 
 set -e
 
-if [ ! - d out ]; then
+if [ ! -d out ]; then
 mkdir out
 fi
 
-if [ ! - d jars ]; then
+if [ ! -d jars ]; then
 mkdir jars
 fi
 
