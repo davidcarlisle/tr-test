@@ -1,2 +1,7 @@
 #!/bin/bash
+
+if [ ! - d out ]; then
+mkdir out
+fi
+
 wget http://central.maven.org/maven2/net/sf/saxon/Saxon-HE/9.8.0-2/Saxon-HE-9.8.0-2.jar

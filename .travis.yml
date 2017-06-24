@@ -3,4 +3,13 @@ install:
 
 script:
  - ./run
- 
+
+deploy:
+  provider: pages
+  local_dir: out
+  skip_cleanup: true
+  repo: git@github.com:davidcarlisle/tr-out.git
+  target_branch: gh-pages
+  github_token: $ghauth # Set in travis-ci.org dashboard
+  on:
+    branch: master
