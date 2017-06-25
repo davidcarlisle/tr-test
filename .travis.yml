@@ -1,5 +1,4 @@
 
-language: generic
  
 install:
  - ./install-jars
