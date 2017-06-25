@@ -1,0 +1,9 @@
+
+test1
+this works but uses a gh oauth key and the travis deploy to gh_pages rule
+
+The oauth has problems as noted in test2
+the gh pages deploy uses git push --force so _wipes
+the entire website_ each time so the tr-out website _only_ has the
+files generated here. So no use for updating one directory in a larger
+site.

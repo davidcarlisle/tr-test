@@ -1,0 +1,27 @@
+
+test2
+this works but uses a gh oauth key 
+
+The code now explicitly clones the original website, updates teh
+generated files, commits and pushes the result.
+
+
+This works and is simplest for a one-author site but
+anyone with write access to the scripts could find the unencode oauth
+key which would give access to all the repositories of the user that
+set up the key.
+
+Only use this on share repositoires if the key is generated for a
+"fake" user that is just associated with the repository.
+
+This will be addressed by using ssh keys in a later test (once I get
+it working)
+
+An issue with the specific build script is that it uses the default
+ubuntu tex 2009 which is too old for the EPOCH feature so pdf
+generation is not reproducible, the pdf will show a timestamp
+difference each time it is build so result in spurious commits to the
+generated output.
+
+
+

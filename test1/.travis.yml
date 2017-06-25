@@ -1,0 +1,22 @@
+before_install:
+ - sudo apt-get install texlive-latex-base
+ 
+install:
+ - ./install-jars
+
+cache:
+  directories:
+    - $HOME/jars
+
+script:
+ - ./run
+
+deploy:
+  provider: pages
+  local_dir: out
+  skip_cleanup: true
+  repo: davidcarlisle/tr-out
+  target_branch: gh-pages
+  github_token: $ghauth # Set in travis-ci.org dashboard
+  on:
+    branch: master

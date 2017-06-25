@@ -1,0 +1,26 @@
+#!/bin/bash
+set -e
+
+BUILD=$PWD
+
+echo run
+java -jar jars/Saxon-HE-9.8.0-2.jar -o:zz.html zz.xml zz.xsl
+
+echo texrun
+java -jar jars/Saxon-HE-9.8.0-2.jar -o:zz.tex zz.xml zztex.xsl
+export SOURCE_DATE_EPOCH=1498228223 # 2017/06/23  date +'%s'
+export FORCE_SOURCE_DATE=1
+export SOURCE_DATE_EPOCH_TEX_PRIMITIVES=1 # old version
+pdflatex zz
+
+rm -rf tr-out
+echo clone
+git config --global user.email "d.p.carlisle@gmail.com"
+git config --global user.name "Travis CI"
+git clone https://$ghauth@github.com/davidcarlisle/tr-out.git 
+cd tr-out
+git checkout -b gh-pages origin/gh-pages
+cp $BUILD/zz.html $BUILD/zz.pdf doc
+git commit -a -m "from travis ci"
+git push
+

@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+echo run
+java -jar jars/Saxon-HE-9.8.0-2.jar -o:out/doc/zz.html zz.xml zz.xsl
+
+echo texrun
+java -jar jars/Saxon-HE-9.8.0-2.jar -o:zz.tex zz.xml zztex.xsl
+pdflatex zz
+cp zz.pdf out/doc
+echo test > out/doc/index.html
