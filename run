@@ -13,8 +13,6 @@ export FORCE_SOURCE_DATE=1
 export SOURCE_DATE_EPOCH_TEX_PRIMITIVES=1 # old version
 export PATH=/tmp/texlive/bin/x86_64-linux:$PATH
 
-echo PATH = $PATH
-ls /tmp/texlive/bin
 echo run pdflatex
 pdflatex zz
 
@@ -26,6 +24,6 @@ git clone https://$ghauth@github.com/davidcarlisle/tr-out.git
 cd tr-out
 git checkout -b gh-pages origin/gh-pages
 cp $BUILD/zz.html $BUILD/zz.pdf doc
-git commit -a -m "from travis ci"
+git commit -a -m "from travis ci" || echo no changes
 git push
 
