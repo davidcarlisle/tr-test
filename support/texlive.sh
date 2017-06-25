@@ -5,7 +5,7 @@
 export PATH=/tmp/texlive/bin/x86_64-linux:$PATH
 #export PATH=/tmp/texlive/bin/x86_64-cygwin:$PATH
 
-if [ ! -d /tmp/texlive ]; then
+if [ ! -f /tmp/texlive/bin/x86_64-linux/pdflatex ]; then
   # Obtain TeX Live
   wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
   tar -xzf install-tl-unx.tar.gz
