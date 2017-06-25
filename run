@@ -17,7 +17,7 @@ rm -rf tr-out
 echo clone
 git config --global user.email "d.p.carlisle@gmail.com"
 git config --global user.name "Travis CI"
-git clone https://$ghtoken@github.com/davidcarlisle/tr-out.git 
+git clone https://$ghauth@github.com/davidcarlisle/tr-out.git 
 cd tr-out
 git checkout -b gh-pages origin/gh-pages
 cp $BUILD/zz.html $BUILD/zz.pdf doc
