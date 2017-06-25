@@ -25,5 +25,8 @@ echo texlive
 
 . ./support/texlive.sh
 
+cd $BUILD
+
+
 
 
