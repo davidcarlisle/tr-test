@@ -15,7 +15,7 @@ deploy:
   provider: pages
   local_dir: out
   skip_cleanup: true
-  repo: davidcarlisle/tr-out/doc
+  repo: davidcarlisle/tr-out
   target_branch: gh-pages
   github_token: $ghauth # Set in travis-ci.org dashboard
   on:
