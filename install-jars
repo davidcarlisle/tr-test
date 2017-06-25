@@ -19,6 +19,6 @@ fi
 
 echo texlive
 
-# source support/texlive.sh
+source support/texlive.sh
 
 
