@@ -1,0 +1,32 @@
+#!/bin/bash
+
+set -e
+
+
+BUILD=$PWD
+
+if [ ! -d out ]; then
+mkdir out
+fi
+
+if [ ! -d /tmp/jars ]; then
+mkdir /tmp/jars
+fi
+
+cd /tmp/jars
+
+if [ ! -f Saxon-HE-9.8.0-2.jar ]; then
+    wget http://central.maven.org/maven2/net/sf/saxon/Saxon-HE/9.8.0-2/Saxon-HE-9.8.0-2.jar
+fi
+
+cd $BUILD
+
+echo texlive
+
+. ./support/texlive.sh
+
+cd $BUILD
+
+
+
+
