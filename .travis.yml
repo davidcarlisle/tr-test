@@ -11,14 +11,3 @@ cache:
 script:
  - ./run
 
-deploy:
-  provider: pages
-  local_dir: out
-  skip_cleanup: true
-  repo: davidcarlisle/tr-out
-  file_glob: true
-  file: "doc/*"
-  target_branch: gh-pages
-  github_token: $ghauth # Set in travis-ci.org dashboard
-  on:
-    branch: master

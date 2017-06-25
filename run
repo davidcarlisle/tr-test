@@ -1,10 +1,21 @@
 #!/bin/bash
 set -e
+
+BUILD=$PWD
+
 echo run
-java -jar jars/Saxon-HE-9.8.0-2.jar -o:out/doc/zz.html zz.xml zz.xsl
+java -jar jars/Saxon-HE-9.8.0-2.jar -o:zz.html zz.xml zz.xsl
 
 echo texrun
 java -jar jars/Saxon-HE-9.8.0-2.jar -o:zz.tex zz.xml zztex.xsl
 pdflatex zz
-cp zz.pdf out/doc
-echo test > out/doc/index.html
+
+rm -rf tr-out
+echo clone
+git clone https://$ghtoken@github.com/davidcarlisle/tr-out.git 
+cd tr-out
+git checkout -b gh-pages origin/gh-pages
+cp $BUILD/zz.html $BUILD/zz.pdf doc
+git commit -a -m "from travis ci"
+git push
+
