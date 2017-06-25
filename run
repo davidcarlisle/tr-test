@@ -14,7 +14,7 @@ export SOURCE_DATE_EPOCH_TEX_PRIMITIVES=1 # old version
 export PATH=/tmp/texlive/bin/x86_64-linux:$PATH
 
 echo PATH = $PATH
-ls /tmp/texlive
+ls /tmp/texlive/bin
 echo run pdflatex
 pdflatex zz
 
