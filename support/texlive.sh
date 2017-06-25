@@ -14,14 +14,15 @@ if [ ! -d /tmp/textlive ]; then
   # Install a minimal system
   ./install-tl --profile=../support/texlive.profile
 
-  cd ..
-fi
-
-
 tlmgr install collection-fontsrecommended
 
 # Keep no backups (not required, simply makes cache bigger)
 tlmgr option -- autobackup 0
+
+cd ..
+fi
+
+
 
 # if need latest Update the TL install but add nothing new
 # tlmgr update --self --all --no-auto-install
