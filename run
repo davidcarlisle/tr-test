@@ -12,6 +12,10 @@ export SOURCE_DATE_EPOCH=1498228223 # 2017/06/23  date +'%s'
 export FORCE_SOURCE_DATE=1
 export SOURCE_DATE_EPOCH_TEX_PRIMITIVES=1 # old version
 export PATH=/tmp/texlive/bin/x86_64-linux:$PATH
+
+echo PATH = $PATH
+ls /tmp/texlive
+echo run pdflatex
 pdflatex zz
 
 rm -rf tr-out
