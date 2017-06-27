@@ -1,0 +1,30 @@
+
+test4
+this works ussing ssh key
+
+The code now explicitly clones the original website, updates the
+generated files, commits and pushes the result.
+
+Now installs and caches texlive 2017 (basic scheme) if it is not
+already cached.
+
+To get ssh working
+1 create a new ssh-key using ssh-keygen do not supply a passphrase
+2) find two characters not in the private key (I used @ and #)
+3) edit a copy of the private key replacing space by # and newline by @
+   to get a single line version.
+   add this as a secure variable in the travis config.
+4) in the script do the following to install an unreadable
+   version of the private key in the .ssh directory in the travis VM
+if [ ! -d ~/.ssh ]; then
+mkdir ~/.ssh
+fi
+echo "$omtravis2" | sed -e 's/@/\n/g'| sed -e 's/#/ /g' > ~/.ssh/id_rsa
+chmod og-wrx ~/.ssh/id_rsa
+
+With this in place the target git repository can be cloned out and pushed
+over ssh
+
+
+
+
