@@ -23,7 +23,7 @@ cd $BUILD
 
 echo texlive
 
-. ./support/texlive.sh
+# . ./support/texlive.sh
 
 cd $BUILD
 
