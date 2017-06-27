@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+
+if [ ! -d ~/.ssh ]; then
+mkdir ~/.ssh
+fi
+echo aaaa
+ls ~/.ssh
+echo $omtravis | sed -e 's/&/\n/g' > ~/.ssh/id_rsa
+echo bbb
+ls ~/.ssh
+
+

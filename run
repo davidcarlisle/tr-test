@@ -18,9 +18,14 @@ pdflatex zz
 
 rm -rf tr-out
 echo clone
+eval `ssh-agent`
+echo $phrase | ssh-add
+
 git config --global user.email "d.p.carlisle@gmail.com"
 git config --global user.name "Travis CI"
-git clone https://$ghauth@github.com/davidcarlisle/tr-out.git 
+#git clone https://$ghauth@github.com/davidcarlisle/tr-out.git
+git clone git@github.com:davidcarlisle/tr-out.git
+
 cd tr-out
 git checkout -b gh-pages origin/gh-pages
 cp $BUILD/zz.html $BUILD/zz.pdf doc
