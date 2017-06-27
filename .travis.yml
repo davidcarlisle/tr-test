@@ -1,7 +1,4 @@
 
-before_script:
- - ./install-key
- 
 install:
  - ./install-jars
 
