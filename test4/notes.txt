@@ -28,6 +28,9 @@ chmod og-wrx ~/.ssh/id_rsa
 With this in place the target git repository can be cloned out and pushed
 over ssh
 
+This version also uses $TRAVIS_COMMIT_MESSAGE to recycle the commit
+message that triggered travis, adding it to the commit message to
+commit the generated outcome.
 
 
 
