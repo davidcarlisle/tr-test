@@ -29,6 +29,9 @@ chmod og-wrx ~/.ssh/id_rsa
 echo bbb
 ls ~/.ssh
 
+echo $XX[$TRAVIS_COMMIT]YY"
+
+echo $XX[$TRAVIS_COMMIT_MESSAGE]YY"
 
 echo clone
 git config --global user.email "d.p.carlisle@gmail.com"
