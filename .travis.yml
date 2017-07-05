@@ -1,9 +1,4 @@
 
-notifications:
-  email:
-    recipients:
-      - secure: $dcmail
-
 install:
  - ./install-jars
 
