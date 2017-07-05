@@ -34,3 +34,5 @@ commit the generated outcome.
 
 
 
+Also it adds notification emails with the addresses encrypted as secure
+environent variables set in the travis settings.
