@@ -1,7 +1,7 @@
 notifications:
   email:
     recipients:
-    - secure: fBC4bZ380F+FVyh+P0S6QEZ9x6p2fxgC7jedQdjdUgnj3aFwvB4raPk/ETQS8s7CIvR3GahZF6kDOYPVKdb3tZrkeIeZYyBaayO81faltxACWPPV2mYazwF+AzIpstpSBzrDYc9jy9tgDOrgoE4r0TEomYZBHGYbK3mCXPj4RqXCFN2Xqo9yHxguWV+YDTmcKw7JZRMBafwnKoPpbDBR0ZmnBgTHQ9Z3+T1urGeQSzAbe1EXvGtpM6sjLlyItV0QTzpZ+T9R6TDR7NC+GRYimQEKBc0kfn9cVhlvwJBMnZKef+GPy26KACkcp3mDxtUC0TlXClESRqS9WsHHs2KkGHmxbBW8hu68N7KYZxCdM7A9xsrVHm7L6uhV1K3hgNm27JhIIkXsb1Ol5HBOVAv10uqKphq8NygwbuKO6ohws+XSuL3ElsQi0m7IXQztvey9Mq5SqSRI03rGuS0O/S4jsTgamh+gr1qFXh5ZlkzaReHrBxafb6QaPqL1HhL0PEQb/ZskuIWLdD/eGLKijF6d2WMYUQHjCNnJb1bTX4fEavTBQA7/fqei/qqiIs1AUK1ecmL5HY8muPya48PzfmwZ31ipBMxiUjaCHDPzWQBggFHlHdTPK+WZx04sW7fGfS+vUuEgqENKmxV4GDY+n+KB66FdU/0GSQZIEGI1F/F8dKc=
+    - $XX
 install:
 - "./install-jars"
 cache:
