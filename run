@@ -22,12 +22,15 @@ echo ssh stuff
 if [ ! -d ~/.ssh ]; then
 mkdir ~/.ssh
 fi
-echo aaaa
-ls ~/.ssh
-echo "$omtravis2" | sed -e 's/@/\n/g'| sed -e 's/#/ /g' > ~/.ssh/id_rsa
-chmod og-wrx ~/.ssh/id_rsa
-echo bbb
-ls ~/.ssh
+# never over-write an existing ssh file
+if [ ! -f ~/.ssh/id_rsa ]; then
+    ls ~/.ssh
+    echo "$omtravis2" | sed -e 's/@/\n/g'| sed -e 's/#/ /g' > ~/.ssh/id_rsa-
+    chmod og-wrx ~/.ssh/id_rsa
+    ls ~/.ssh
+else
+    echo existing id_rsa file
+fi
 
 echo clone
 git config --global user.email "d.p.carlisle@gmail.com"
