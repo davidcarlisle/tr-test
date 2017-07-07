@@ -25,7 +25,7 @@ fi
 # never over-write an existing ssh file
 if [ ! -f ~/.ssh/id_rsa ]; then
     ls ~/.ssh
-    echo "$omtravis2" | sed -e 's/@/\n/g'| sed -e 's/#/ /g' > ~/.ssh/id_rsa-
+    echo "$omtravis2" | sed -e 's/@/\n/g'| sed -e 's/#/ /g' > ~/.ssh/id_rsa
     chmod og-wrx ~/.ssh/id_rsa
     ls ~/.ssh
 else
